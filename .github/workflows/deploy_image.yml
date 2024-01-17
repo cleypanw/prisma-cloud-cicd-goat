@@ -24,7 +24,7 @@ jobs:
 
       - name: Check PR title
         run: |
-          title="${{ github.event.pull_request.title }}"
+          title=${{ github.event.pull_request.title }}
           if [[ $title =~ ^cley ]]; then
           echo "PR title starts with 'cley'"
           exit 0
