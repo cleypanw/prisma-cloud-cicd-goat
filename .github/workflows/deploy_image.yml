@@ -23,7 +23,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2
 
-      - name: Check PR title
+      - name: Check PR title before merge
         run: |
           title=${{ github.event.pull_request.title }}
           if [[ $title =~ ^cley ]]; then
